@@ -1,5 +1,9 @@
 import add from './add';
 
-test('add 1+2==3', () => {
-  expect(add(1,2)).toBe(3);
+test('async/await', async () => {
+  expect(await add(1, 2)).toBe(3);
+})
+
+test('resolves', () => {
+  expect(add(1, 2)).resolves.toBe(3);
 })

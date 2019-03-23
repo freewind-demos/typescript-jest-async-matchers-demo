@@ -1,7 +1,7 @@
-TypeScript Jest Demo
-===========================
+TypeScript Jest Async Matchers Demo
+===================================
 
-使用typescript就需要在`jest.config.js`中使用`ts-jest`作为`preset`
+对于返回Promise的函数，既可以使用`async/await`，也可以使用`.resolves`
 
 ```
 npm install
