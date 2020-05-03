@@ -4,12 +4,10 @@ test('async/await', async () => {
   expect(await add(1, 2)).toBe(3);
 })
 
-test('resolves', () => {
-  // Notice: the 'return' here is needed
-  return expect(add(1, 2)).resolves.toBe(3);
+test('resolves', async () => {
+  await expect(add(1, 2)).resolves.toBe(3);
 })
 
-test('rejects', () => {
-  // Notice: the 'return' here is needed
-  return add(1, -1).catch(error => expect(error.message).toBe('Invalid'));
+test('rejects', async () => {
+  await expect(add(1, -1)).rejects.toThrowError('Invalid');
 })
